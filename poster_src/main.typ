@@ -45,3 +45,7 @@ place(malign, dy: mdy, dx: mdx,
    The responses of primate Hippocampal cells have been found to exhibit mixed selectivity to both space and view, supporting an increased role of vision in navigation compared to rodents. In this study, we record from such cells as a non-human primate subject navigates a virtual maze. Using a detailed, mesh based method to quantify how these cells respond to both spatial location and gaze position, we find a substantial portion with  mixed place and view responses, highlighting the complex role that the primate Hippocampus plays during navigation.
   ]
 ]
+
+#contentbox("2. Behavior", malign: top+left, mdy: 43cm, mheight:auto, mwidth:30cm)[
+  #figure(image("figures/figure1.png"))
+]
