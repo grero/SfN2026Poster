@@ -2,8 +2,9 @@
              author: ("Roger Herikstad"))
 
 #set page(height: 100cm,
-          width: 160cm, margin: (top: 5cm, bottom: 5cm, left: 2cm, right: 2cm))
+          width: 160cm, margin: (top: 3cm, bottom: 5cm, left: 1cm, right: 1cm))
 
+#set text(24pt)
 #set par(justify: true)
 
 
@@ -13,13 +14,13 @@ place(malign, dy: mdy, dx: mdx,
         rect(width: mwidth, height:mheight, radius: 40pt,inset: 0pt, stroke: 1pt,
         stack(dir:ttb,
         align(top+center,
-            rect(width: 100%, height:3.0cm, radius: 20pt, fill: rgb(28%,46%,100%), stroke: black, 
+            rect(width: 100%, height:3.0cm, radius: 20pt, fill: rgb(28%,66%,100%), stroke: black, 
                  align(horizon+center,
                      text(size: 42pt, weight: "bold", heading(level:1,myheading)))
                  )
             )
           ,
-          block(inset: 1cm,text(size: 36pt)[#body])
+          block(inset: 1cm,text(size: 24pt)[#body])
         )
       )
   )  
@@ -28,7 +29,7 @@ place(malign, dy: mdy, dx: mdx,
 #place(center+top,
   align(top+center,
     box(width:100%, height: auto,
-     rect(fill: rgb(28%,46%,100%),radius: 40pt,inset: 70pt)[
+     rect(fill: rgb(28%,66%,100%),radius: 40pt,inset: 70pt)[
      
         #text(size:96pt, fill: rgb(0, 0, 0))[#title()],
         #text(size:48pt, fill: black)[Roger Herikstad, Tabitha Ng, Cullen Owens, Hui Min Tan, Camilo Libedinsky, Shih-Cheng Yen]
@@ -46,7 +47,7 @@ place(malign, dy: mdy, dx: mdx,
   ]
 ]
 
-#contentbox("Behavior", malign: top+left, mdy: 40cm, mheight:auto, mwidth:30cm)[
+#contentbox("Behavior", malign: top+left, mdy: 40cm, mheight:auto, mwidth:35cm)[
   #figure(image("figures/figure1.png"))
   #table(columns: (auto, auto), stroke: 0pt,
           image("figures/view_occupancy.png"),
@@ -55,20 +56,36 @@ place(malign, dy: mdy, dx: mdx,
     )
 ]
 
-#contentbox("Spatial responses", malign: top+left, mdx: 32cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+#contentbox("Spatial responses", malign: top+left, mdx: 36cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
   #figure(image("figures/figure2.png"))
 ]
 
-#contentbox("View responses", malign: top+left, mdx: 58cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+#contentbox("View responses", malign: top+left, mdx: 62cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
   #figure(image("figures/figure3.png"))
 ]
 
-#contentbox("Conjunctive", malign: top+left, mdx: 84cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
-  #figure(image("figures/figure4.png"))
+#contentbox("Joint responses", malign: top+left, mdx: 36cm, mdy: 69cm, mheight:auto, mwidth:51cm)[
+  #table(columns: (50%, 50%), stroke: 0pt,
+         [
+           #image("figures/figure_joint_fields.png")
+          The number of place fields (left) and view fields (right) per bin for cells with both place and view fields.
+        ],
+        []
+      )
 ]
 
-#contentbox("Model", malign: top+left, mdx: 110cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
-  #figure(image("figures/figure2.png"))
+#contentbox("Field Conjunctions", malign: top+left, mdx: 88cm, mdy: 23cm, mheight:auto, mwidth:30cm)[
+  #figure(image("figures/figure4.png"))
+  Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the red place field. C) Mean activity within the original view field when the subject was in the place field (red asterisk) vs when he was in other non-place field bins (gray distribution), and mean activity within the view field conditioned on the place field (red diamond) vs mean activity outside the view field (blue distribution). D-E) Same as C, but for place conditioned on view. F) Three example cells with larger distance between place (stick) and view (patches) fields.
+  #figure(image("figures/figure_conjunctive_fields.png"))
+  Summary of all significant conjunctions. Each red patch represents a view field and each blue patch represents a place field, while black connecting lines indicate specific conjunctions. The two panels show the same data from different angles. 
+]
+#contentbox("Summary", malign: top+left, mdx: 120cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+  #image("figures/summary_figure_new.png")
+  The different classes of hippocampal cells and their relationship to each other.
+]
+
+#contentbox("Model", malign: top+left, mdx: 120cm, mdy: 46cm, mheight:auto, mwidth:25cm)[
 ]
 
 
