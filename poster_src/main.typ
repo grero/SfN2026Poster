@@ -56,7 +56,7 @@ place(malign, dy: mdy, dx: mdx,
 ]
 
 #contentbox("Behavior", malign: top+left, mdy: 35cm, mheight:auto, mwidth:35cm)[
-  #figure(image("figures/figure1.png"))
+  #figure(image("figures/figure1_new.png"))
   #table(columns: (auto, auto), stroke: 0pt,
           image("figures/view_occupancy.png"),
           text(size:24pt)[Top: A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) Top-down view of the maze showing the location of the 6 goal posters. C) Performance per poster. D) Trajectory length relative to optimal. E) Sample trajectories for one session. F) 3D rendering of the recording chamber and electrodes.
@@ -86,7 +86,7 @@ place(malign, dy: mdy, dx: mdx,
         image("figures/joint_vs_ind_sic.png"),
         [
           #align(horizon)[
-          Comparison of the SIC for joint place and view responses vs the sum of SIC for place and view responses separately for cells with either place or view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) were cells where the joint was larger. ]
+          Comparison of the SIC for joint place and view responses vs the sum of SIC for place and view responses separately for cells with either place and view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) are cells where the joint was larger than the sum. ]
         ]
       )
       )
