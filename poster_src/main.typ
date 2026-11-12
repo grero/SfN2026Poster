@@ -28,34 +28,43 @@ place(malign, dy: mdy, dx: mdx,
 
 #place(center+top,
   align(top+center,
-    box(width:100%, height: auto,
-     rect(fill: rgb(28%,66%,100%),radius: 40pt,inset: 70pt)[
-     
-        #text(size:96pt, fill: rgb(0, 0, 0))[#title()]
-        #text(size:48pt, fill: black)[Roger Herikstad#super[1], Tabitha Ng#super[1], Cullen Owens#super[1], Hui Min Tan#super[1], Camilo Libedinsky#super[1,2], Shih-Cheng Yen#super[1,3] 
-      ]
-      #place(top+center, dy: 17.5cm, 
-      text(size:24pt)[
-        #super[1] N.1 Institute for Health, National University of Singapore,
-        #super[2] Department of Psychology, National University of Singapore,
-        #super[3] College of Design and Engineering, National University of Singapore
-      ]
+     rect(width: 99.9%, height:auto, fill: rgb(28%,66%,100%),radius: 40pt,inset: 70pt,
+        align(center+horizon, 
+          stack(dir:ttb,spacing: none,
+            align(center,
+             rect(width: 85%, height:auto, stroke:0pt, 
+              text(size:96pt, fill: rgb(0, 0, 0))[#title()]
+              )
+            ),
+            v(2cm),
+           align(center,
+             text(size:48pt, fill: black)[Roger Herikstad#super[1], Tabitha Ng#super[1], Cullen Owens#super[1], Hui Min Tan#super[1], Camilo Libedinsky#super[1,2], Shih-Cheng Yen#super[1,3] 
+             ]
+           ),
+           v(1.0cm),
+           align(center, 
+            text(size:24pt)[
+              #super[1] N.1 Institute for Health, National University of Singapore,
+              #super[2] Department of Psychology, National University of Singapore,
+              #super[3] College of Design and Engineering, National University of Singapore
+            ]
+         )
       )
-      ]
+  )
 )
 )
 )
 
 // This shows the poster number
-#place(top+left,dx: 5cm, dy: 10cm,
+#place(top+left,dx: 3cm, dy: 2cm,
         rect(width: 10cm, height:auto, stroke: 0pt)[
           #text(size:64pt)[PSTR248.21]
 ]
 )
 
 // NUS N.1 Logo
-#place(top+right, dx: -5cm, dy: 10cm,
-  rect(width: 17cm, height: auto, stroke: 0pt,
+#place(top+right, dx: -1cm, dy: 2cm,
+  rect(width: 13cm, height: auto, stroke: 0pt,
     image("figures/N.1 Logo.jpg")
   )
 )
@@ -125,7 +134,7 @@ place(malign, dy: mdy, dx: mdx,
 
 #contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
   #image("figures/poster_selectivity_figure.png")
-  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes) (A). C) Summary across all view cells. "Landmark" cells had at least one overlapping view field with a selective poster from the queue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
+  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes) (A). C) Summary across all view cells. "Landmark" cells had at least one overlapping view field with a selective poster from the cue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
 ]
 
 
