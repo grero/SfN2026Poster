@@ -1,4 +1,4 @@
-#set document(title: "Mixed selectivity to place and view in the primate hippocampus",
+#set document(title: "Place and view responses are multiplexed in the primate hippocampus during virtual navigation",
              author: ("Roger Herikstad"))
 
 #set page(height: 100cm,
@@ -31,7 +31,7 @@ place(malign, dy: mdy, dx: mdx,
     box(width:100%, height: auto,
      rect(fill: rgb(28%,66%,100%),radius: 40pt,inset: 70pt)[
      
-        #text(size:96pt, fill: rgb(0, 0, 0))[#title()],
+        #text(size:96pt, fill: rgb(0, 0, 0))[#title()]
         #text(size:48pt, fill: black)[Roger Herikstad#super[1], Tabitha Ng#super[1], Cullen Owens#super[1], Hui Min Tan#super[1], Camilo Libedinsky#super[1,2], Shih-Cheng Yen#super[1,3] 
       ]
       #place(top+center, dy: 17.5cm, 
@@ -45,13 +45,27 @@ place(malign, dy: mdy, dx: mdx,
 )
 )
 )
+
+// This shows the poster number
+#place(top+left,dx: 5cm, dy: 10cm,
+        rect(width: 10cm, height:auto, stroke: 0pt)[
+          #text(size:64pt)[PSTR248.21]
+]
 )
 
-#box(width: 0.3fr, height: auto, )
+// NUS N.1 Logo
+#place(top+right, dx: -5cm, dy: 10cm,
+  rect(width: 17cm, height: auto, stroke: 0pt,
+    image("figures/N.1 Logo.jpg")
+  )
+)
+
+
+//#box(width: 0.3fr, height: auto, )
 
 #contentbox("Introduction", malign:top+left, mdy: 23cm,mheight:auto, mwidth: 35cm)[
   #text(size:24pt)[
-   The responses of primate Hippocampal cells have been found to exhibit mixed selectivity to both space and view, supporting an increased role of vision in navigation compared to rodents. In this study, we record from such cells as a non-human primate subject navigates a virtual maze. Using a detailed, mesh based method to quantify how these cells respond to both spatial location and gaze position, we find a substantial portion with  mixed place and view responses, highlighting the complex role that the primate Hippocampus plays during navigation.
+   The responses of primate hippocampal cells have been found to exhibit mixed selectivity to both space and view, supporting an increased role of vision in navigation compared to rodents. In this study, we record from such cells as a non-human primate subject navigates a virtual maze. Using a detailed, mesh based method to quantify how these cells respond to both spatial location and gaze position, we find a substantial portion with  mixed place and view responses, highlighting the complex role that the primate hippocampus plays during navigation.
   ]
 ]
 
@@ -59,24 +73,26 @@ place(malign, dy: mdy, dx: mdx,
   #figure(image("figures/figure1_new.png"))
   #table(columns: (auto, auto), stroke: 0pt,
           image("figures/view_occupancy.png"),
-          text(size:24pt)[Top: A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) Top-down view of the maze showing the location of the 6 goal posters. C) Performance per poster. D) Trajectory length relative to optimal. E) Sample trajectories for one session. F) 3D rendering of the recording chamber and electrodes.
-          Left: Distribution of gaze points on each of the surfaces of the maze.]
+          text(size:24pt)[A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) 3D rendering of the recording chamber and electrodes. C) Top-down view of the maze showing the location of the 6 goal posters. D) Performance per start and goal poster pair. E) Trajectory length relative to optimal. F) Sample trajectories for one session. G) Distribution of gaze points on each of the surfaces of the maze.]
     )
 ]
 
-#contentbox("Spatial responses", malign: top+left, mdx: 36cm, mdy: 23cm, mheight:auto, mwidth:27cm)[
+//a bit hackish: just place a panel label here
+#place(bottom+left, dx:2cm, dy: -10cm)[G]
+
+#contentbox("Spatial responses", malign: top+left, mdx: 36cm, mdy: 23cm, mheight:auto, mwidth:28cm)[
   #figure(image("figures/figure2_new.png"))
-  Examples of spatially selective cells, with identified clusters (dots) and cluster that exceed a clustering threshold (white outline). C-E) Statistics on number or fields (C), field size (D) and peak firing rate (E). F) Distribution of fields across all cells with at least one place field.
+  A-D) Examples of spatially selective cells, with identified clusters (dots) and clusters that exceed the clustering threshold (filled vertical lines and black outline). E-H) Statistics on number of fields (E), field size (F), and peak firing rate (G) for cells with significant clusters (gray) and those without (black). H) Number of overlapping place fields in each of the spatial bins in the maze.
 ]
 
-#contentbox("View responses", malign: top+left, mdx: 64cm, mdy: 23cm, mheight:auto, mwidth:32cm)[
+#contentbox("View responses", malign: top+left, mdx: 65cm, mdy: 23cm, mheight:auto, mwidth:32cm)[
   #figure(image("figures/figure3_new.png"))
-  Examples of view selective cells. Each panel is A) shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). C-E) Statistics on number of fields (C), field size (D) and peak activity (E). F) Distribution of view fields for each view bin.
+  A-D) Examples of view selective cells. Each panel in A and C shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). E-H) Statistics on number of fields (E), field size (F), and peak activity (G) for cells with significant clusters (gray) and those without (black). H) Number of overlapping view fields in each of the view bins in the maze.
   \
   \ 
 ]
 
-#contentbox("Joint responses", malign: top+left, mdx: 36cm, mdy: 76cm, mheight:auto, mwidth:60cm)[
+#contentbox("Joint responses", malign: top+left, mdx: 36cm, mdy: 77cm, mheight:auto, mwidth:60cm)[
   #table(columns: (50%, 50%), stroke: 0pt,
          [
            #image("figures/figure_joint_fields.png")
@@ -86,7 +102,7 @@ place(malign, dy: mdy, dx: mdx,
         image("figures/joint_vs_ind_sic.png"),
         [
           #align(horizon)[
-          Comparison of the SIC for joint place and view responses vs the sum of SIC for place and view responses separately for cells with either place and view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) are cells where the joint was larger than the sum. ]
+          Comparison of the SIC for joint place and view responses vs the sum of SIC for place and view responses separately for cells with both place and view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) are cells where the joint was larger than the sum. ]
         ]
       )
       )
@@ -113,7 +129,7 @@ place(malign, dy: mdy, dx: mdx,
 ]
 
 
-#contentbox("Place field orientation", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+#contentbox("Place field directionality", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
   #image("figures/directional_place_fields_figure.png")
   Place cells with directional place fields. A-D) Two (A and C) directional place field for one place cell. B and D) The difference in mean activity within each place field for forward and reverse trials. Distributions were obtained by a permutation test. E) Summary of location and direction of each directed place field. F) Number of place cells with directed place fields (purple). G) Comparison of distance from place field to nearest poster. 
 ]
