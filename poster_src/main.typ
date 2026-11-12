@@ -88,7 +88,6 @@ place(malign, dy: mdy, dx: mdx,
 #contentbox("View responses", malign: top+left, mdx: 65cm, mdy: 23cm, mheight:auto, mwidth:32cm)[
   #figure(image("figures/figure3_new.png"))
   A-D) Examples of view selective cells. Each panel in A and C shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). E-H) Statistics on number of fields (E), field size (F), and peak activity (G) for cells with significant clusters (gray) and those without (black). H) Number of overlapping view fields in each of the view bins in the maze.
-  \
   \ 
 ]
 
@@ -117,21 +116,16 @@ place(malign, dy: mdy, dx: mdx,
   )
 ]
 
-#contentbox("Poster selectivity", malign: top+left, mdx: 99cm, mdy: 66cm, mheight:auto, mwidth:32cm)[
-  #image("figures/poster_selectivity_figure.png")
-  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (A). C) Summary across all view cells. "Landmark" had at least one overlapping view field with the a selective poster from the queue period, while "poster view" were cells with at least one view field overlapping with a poster.
-]
-
-#place(top+left, dx: 99cm, dy: 92cm)[
-  #rect(width: 32cm, height:2.6cm, stroke:0pt,
-    text(size:24pt)[Funded by the Ministry of Education Tier 3 Research Fund (MOE2017-T3-1-002) and the National Medical Research Council (MOH-000962).]
-  )
-]
-
-
-#contentbox("Place field directionality", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+#contentbox("Place field directionality", malign: top+left, mdx: 99cm, mdy: 65cm, mheight:auto, mwidth:32cm)[
   #image("figures/directional_place_fields_figure.png")
   Place cells with directional place fields. A-D) Two (A and C) directional place field for one place cell. B and D) The difference in mean activity within each place field for forward and reverse trials. Distributions were obtained by a permutation test. E) Summary of location and direction of each directed place field. F) Number of place cells with directed place fields (purple). G) Comparison of distance from place field to nearest poster. 
+]
+
+
+
+#contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+  #image("figures/poster_selectivity_figure.png")
+  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes) (A). C) Summary across all view cells. "Landmark" cells had at least one overlapping view field with a selective poster from the queue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
 ]
 
 
@@ -142,6 +136,12 @@ place(malign, dy: mdy, dx: mdx,
 
 #contentbox("Conclusions", malign: top+left, mdx: 132cm, mdy: 78cm, mheight:auto, mwidth:25cm)[
  -  
+]
+
+#place(top+left, dx: 132cm, dy: 93cm)[
+  #rect(width: 32cm, height:2.6cm, stroke:0pt,
+    text(size:24pt)[Funded by the Ministry of Education Tier 3 Research Fund (MOE2017-T3-1-002) and the National Medical Research Council (MOH-000962).]
+  )
 ]
 
 
