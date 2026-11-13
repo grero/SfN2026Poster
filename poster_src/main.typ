@@ -2,7 +2,7 @@
              author: ("Roger Herikstad"))
 
 #set page(height: 100cm,
-          width: 160cm, margin: (top: 2cm, bottom: 5cm, left: 1cm, right: 1cm))
+          width: 160cm, margin: (top: 1cm, bottom: 5cm, left: 1cm, right: 1cm))
 
 #set text(24pt)
 #set par(justify: true)
@@ -72,7 +72,7 @@ place(malign, dy: mdy, dx: mdx,
 
 //#box(width: 0.3fr, height: auto, )
 
-#contentbox("Introduction", malign:top+left, mdy: 23cm,mheight:auto, mwidth: 35cm)[
+#contentbox("Introduction", malign:top+left, mdy: 22cm,mheight:auto, mwidth: 35cm)[
   #text(size:24pt)[
    The responses of primate hippocampal cells have been found to exhibit mixed selectivity to both space and view, supporting an increased role of vision in navigation compared to rodents. In this study, we record from such cells as a non-human primate subject navigates a virtual maze. Using a detailed, mesh based method to quantify how these cells respond to both spatial location and gaze position, we find a substantial portion with  mixed place and view responses, highlighting the complex role that the primate hippocampus plays during navigation.
   ]
@@ -82,29 +82,30 @@ place(malign, dy: mdy, dx: mdx,
   #figure(image("figures/figure1_new.png"))
   #table(columns: (auto, auto), stroke: 0pt,
           image("figures/view_occupancy.png"),
-          text(size:24pt)[A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) 3D rendering of the recording chamber and electrodes. C) Top-down view of the maze showing the location of the 6 goal posters. D) Performance per start and goal poster pair. E) Trajectory length relative to optimal. F) Sample trajectories for one session. G) Distribution of gaze points on each of the surfaces of the maze.]
+          text(size:24pt)[A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) 3D rendering of the recording chamber and electrodes. We recorded from a total of 364 well-isolated neurons from the hippocampus. C) Top-down view of the maze showing the location of the 6 goal posters. D) Performance per start and goal poster pair. E) Trajectory length relative to optimal. F) Sample trajectories for one session. G) Distribution of gaze points on each of the surfaces of the maze.
+        #v(1.1cm)]
     )
 ]
 
 //a bit hackish: just place a panel label here
 #place(bottom+left, dx:2cm, dy: -10cm)[G]
 
-#contentbox("Spatial responses", malign: top+left, mdx: 36cm, mdy: 23cm, mheight:auto, mwidth:28cm)[
+#contentbox("Spatial responses", malign: top+left, mdx: 36cm, mdy: 22cm, mheight:auto, mwidth:28cm)[
   #figure(image("figures/figure2_new.png"))
-  A-D) Examples of spatially selective cells, with identified clusters (dots) and clusters that exceed the clustering threshold (filled vertical lines and black outline). E-H) Statistics on number of fields (E), field size (F), and peak firing rate (G) for cells with significant clusters (gray) and those without (black). H) Number of overlapping place fields in each of the spatial bins in the maze.
+  A-D) Examples of spatially selective cells, with identified clusters (dots) and clusters that exceed the clustering threshold (filled vertical lines and black outline). E-H) Statistics on number of fields (E), field size (F), and peak firing rate (G) for place cells (gray) and non-place cells (black). Place cells had higher firing rate than non-place cells (Mann-Whitney, $p=0.009$) (H) Number of overlapping place fields in each of the spatial bins in the maze.
 ]
 
-#contentbox("View responses", malign: top+left, mdx: 65cm, mdy: 23cm, mheight:auto, mwidth:32cm)[
+#contentbox("View responses", malign: top+left, mdx: 65cm, mdy: 22cm, mheight:auto, mwidth:32cm)[
   #figure(image("figures/figure3_new.png"))
-  A-D) Examples of view selective cells. Each panel in A and C shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). E-H) Statistics on number of fields (E), field size (F), and peak activity (G) for cells with significant clusters (gray) and those without (black). H) Number of overlapping view fields in each of the view bins in the maze.
+  A-D) Examples of view selective cells. Each panel in A and C shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). E-H) Statistics on number of fields (E), field size (F), and peak activity (G) for view cells  (gray) and non-view cells (black). View cells had higher firing rate than non-view cells (Mann-Whitney, $p=0.0002$) H) Number of overlapping view fields in each of the view bins in the maze.
   \ 
 ]
 
-#contentbox("Joint responses", malign: top+left, mdx: 36cm, mdy: 77cm, mheight:auto, mwidth:60cm)[
+#contentbox("Joint (Multiplexed) responses", malign: top+left, mdx: 36cm, mdy: 77cm, mheight:auto, mwidth:60cm)[
   #table(columns: (50%, 50%), stroke: 0pt,
          [
            #image("figures/figure_joint_fields.png")
-          The number of place fields (left) and view fields (right) per bin for cells with both place and view fields.
+          The number of overlapping place fields (left) and view fields (right) in each bin for cells with both place and view fields.
         ],
         table(columns: (auto, auto),stroke: 0pt,
         image("figures/joint_vs_ind_sic.png"),
@@ -116,39 +117,52 @@ place(malign, dy: mdy, dx: mdx,
       )
 ]
 
-#contentbox("Field Conjunctions", malign: top+left, mdx: 99cm, mdy: 23cm, mheight:auto, mwidth:32cm)[
+#contentbox("Field Conjunctions", malign: top+left, mdx: 99cm, mdy: 22cm, mheight:auto, mwidth:32cm)[
   #image("figures/figure4_new.png")
-  Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the red place field. C) Mean activity within the original view field when the subject was in the place field (purple asterisk) vs when he was in other non-place field bins (gray distribution), and mean activity within the view field conditioned on the place field (purple diamond) vs mean activity outside the view field (blue distribution). D-E) Same as C, but for place conditioned on view. F) Three example cells with larger distance between place (stick) and view (patches) fields.
-  #table(columns: (1.0fr, 1.0fr),stroke:0pt,
+  Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the pink place field. C) Mean activity within the original view field when the subject was in the place field (pink asterisk) vs when he was in other non-place field bins (gray distribution). A cell was conjunctive if this difference was significant ($p<0.001$). D-E) Same as C, but for place conditioned on view. F) The three cells with larger than 7.5 units distance between place (stick) and view (patches) fields.
+  #table(columns: (1.3fr, 0.7fr),stroke:0pt,
   image("figures/figure_conjunctive_fields.png"),
   [Summary of all significant conjunctions. Each red patch represents a view field and each blue patch represents a place field, while black connecting lines indicate specific conjunctions. The two panels show the same data from different angles. ]
   )
 ]
 
 #contentbox("Place field directionality", malign: top+left, mdx: 99cm, mdy: 65cm, mheight:auto, mwidth:32cm)[
-  #image("figures/directional_place_fields_figure.png")
-  Place cells with directional place fields. A-D) Two (A and C) directional place field for one place cell. B and D) The difference in mean activity within each place field for forward and reverse trials. Distributions were obtained by a permutation test. E) Summary of location and direction of each directed place field. F) Number of place cells with directed place fields (purple). G) Comparison of distance from place field to nearest poster. 
+  //fig = PaperFigures.plot_directional_place_fields(;colormap=:jet, _plot_theme=SfN2026.plot_theme,figsize=(950,800))
+  #align(center,
+    image("figures/directional_place_fields_figure.png")
+  )
+  Place cells with directional place fields may account for some of the conjunctions. A-D) Two (A and C) directional place fields for one place cell. B and D) The difference in mean activity within each place field for forward and reverse trials is shown in the colored dot (green in B and cyan in D). Distributions were obtained by a permutation test. E) Summary of location and direction of each directed place field. F) Number of place cells with directed place fields (purple). G) Comparison of distance from place field to the nearest poster. 
 ]
 
 
 
-#contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 23cm, mheight:auto, mwidth:25cm)[
+#contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 22cm, mheight:auto, mwidth:25cm)[
+  //fig = PaperFigures.plot_landmark_cells(;_plot_theme=SfN2026.plot_theme)
   #image("figures/poster_selectivity_figure.png")
-  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes) (A). C) Summary across all view cells. "Landmark" cells had at least one overlapping view field with a selective poster from the cue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
+  Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes in A). White rectangles represent poster locations. C) Summary across all view cells. "Object" cells had at least one overlapping view field with a selective poster from the cue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
 ]
 
 
-#contentbox("Summary", malign: top+left, mdx: 132cm, mdy: 57cm, mheight:auto, mwidth:25cm)[
+#contentbox("Summary", malign: top+left, mdx: 132cm, mdy: 52cm, mheight:auto, mwidth:25cm)[
   #image("figures/summary_figure_new.png")
   The different classes of hippocampal cells and their relationship to each other.
 ]
 
-#contentbox("Conclusions", malign: top+left, mdx: 132cm, mdy: 78cm, mheight:auto, mwidth:25cm)[
- -  
+#contentbox("Conclusions", malign: top+left, mdx: 132cm, mdy: 73cm, mheight:auto, mwidth:25cm)[
+ - 48.6% of recorded hippocampal cells were spatially selective
+ - 52.7% were selective to view
+ - 68.4% of spatially selective cells had at least one place field
+ - 60.9% of view selective cells had at least one view field
+ - 43.4% of recorded cells were selective to both place and view
+  - 39.9% of these had identified conjunctive responses to place and view
+  - the majority of conjunctive cells had view fields near the poster locations.
+
+ Our results add to the growing body of evidence suggesting that primate hippocampal cells encode complex relationships between spatial location within environments and the visual inputs associated with those environments, and emphasize the increased role that vision serves in primate compared to rodent navigation.
+
 ]
 
-#place(top+left, dx: 132cm, dy: 93cm)[
-  #rect(width: 32cm, height:2.6cm, stroke:0pt,
+#place(top+left, dx: 132cm, dy: 94cm)[
+  #rect(width: 25cm, height:2.6cm, stroke:0pt,
     text(size:24pt)[Funded by the Ministry of Education Tier 3 Research Fund (MOE2017-T3-1-002) and the National Medical Research Council (MOH-000962).]
   )
 ]
