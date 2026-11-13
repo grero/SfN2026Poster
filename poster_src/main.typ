@@ -85,7 +85,7 @@ place(malign, dy: mdy, dx: mdx,
           text(size:24pt)[A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) 3D rendering of the recording chamber and electrodes. We recorded from a total of 364 well-isolated neurons from the hippocampus. C) Top-down view of the maze showing the location of the 6 goal posters. D) Performance per start and goal poster pair. E) Trajectory length relative to optimal. F) Sample trajectories for one session. G) Distribution of gaze points on each of the surfaces of the maze.
         ]
     )
-    #v(3cm)
+    #v(3.7cm)
 ]
 
 //a bit hackish: just place a panel label here
@@ -106,22 +106,24 @@ place(malign, dy: mdy, dx: mdx,
   #table(columns: (50%, 50%), stroke: 0pt,
          [
            #image("figures/figure_joint_fields.png")
-          The number of overlapping place fields (left) and view fields (right) in each bin for cells with both place and view fields.
+          The number of overlapping place fields (left) and view fields (right) in each bin for cells with both place and view fields. White outlines indicate the locations of the posters.
         ],
         table(columns: (auto, auto),stroke: 0pt,
         image("figures/joint_vs_ind_sic.png"),
         [
           #align(horizon)[
-          Comparison of the SIC for joint place and view responses vs the sum of SIC for place and view responses separately for cells with both place and view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) are cells where the joint was larger than the sum. ]
+          Comparison of the Spatial Information Criterion (SIC) for joint place and view responses vs the sum of SIC for place and view responses separately, for cells with both place and view selectivity. Red(undant) cells are cells where the sum was larger than the joint, and syn(ergistic) are cells where the joint was larger than the sum. ]
         ]
       )
       )
-      #v(0.8cm)
+      #v(1.4cm)
 ]
 
 #contentbox("Field Conjunctions", malign: top+left, mdx: 98cm, mdy: 22cm, mheight:auto, mwidth:33cm)[
-  #image("figures/figure4_new.png")
-  Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the pink place field. C) Mean activity within the original view field when the subject was in the place field (pink asterisk) vs when he was in other non-place field bins (gray distribution). A cell was conjunctive if this difference was significant ($p<0.001$). D-E) Same as C, but for place conditioned on view. F) The three cells with larger than 7.5 units distance between place (stick) and view (patches) fields.
+  #align(center,
+   image("figures/figure4_new.png")
+  )
+  Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the pink place field. C) Mean activity within the original view field when the subject was in the place field (blue asterisk) vs when he was in other non-place field bins (gray distribution). A cell was conjunctive if this difference was significant ($p<0.001$). D-E) Same as C, but for place conditioned on view. F) Three cells with larger than 7.5 units distance between place (stick) and view (patches) fields.
   #table(columns: (1.3fr, 0.7fr),stroke:0pt,
   image("figures/figure_conjunctive_fields.png"),
   [Summary of all significant conjunctions. Each red patch represents a view field and each blue patch represents a place field, while black connecting lines indicate specific conjunctions. The two panels show the same data from different angles. ]
@@ -138,19 +140,19 @@ place(malign, dy: mdy, dx: mdx,
 
 
 
-#contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 22cm, mheight:auto, mwidth:25cm)[
+#contentbox("Poster selectivity", malign: top+left, mdx: 132cm, mdy: 22cm, mheight:auto, mwidth:26cm)[
   //fig = PaperFigures.plot_landmark_cells(;_plot_theme=SfN2026.plot_theme)
   #image("figures/poster_selectivity_figure.png")
   Selectivity of cells with view fields to the different posters. A-B) An example of a view cell with view fields overlapping (B) with 3 (camel, crocodile, pig) of the 4 posters with high responses during the cue period (purple boxes in A). White rectangles represent poster locations. C) Summary across all view cells. "Object" cells had at least one overlapping view field with a selective poster from the cue period, while "poster view" cells were cells with at least one view field overlapping with a poster.
 ]
 
 
-#contentbox("Summary", malign: top+left, mdx: 132cm, mdy: 52cm, mheight:auto, mwidth:25cm)[
+#contentbox("Summary", malign: top+left, mdx: 132cm, mdy: 53cm, mheight:auto, mwidth:26cm)[
   #image("figures/summary_figure_new.png")
   The different classes of hippocampal cells and their relationship to each other.
 ]
 
-#contentbox("Conclusions", malign: top+left, mdx: 132cm, mdy: 73cm, mheight:auto, mwidth:25cm)[
+#contentbox("Conclusions", malign: top+left, mdx: 132cm, mdy: 75cm, mheight:auto, mwidth:26cm)[
  - 48.6% of recorded hippocampal cells were spatially selective
  - 52.7% were selective to view
  - 68.4% of spatially selective cells had at least one place field
@@ -163,7 +165,7 @@ place(malign, dy: mdy, dx: mdx,
 
 ]
 
-#place(top+left, dx: 132cm, dy: 94cm)[
+#place(top+left, dx: 132cm, dy: 96cm)[
   #rect(width: 25cm, height:2.6cm, stroke:0pt,
     text(size:24pt)[Funded by the Ministry of Education Tier 3 Research Fund (MOE2017-T3-1-002) and the National Medical Research Council (MOH-000962).]
   )
