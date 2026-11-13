@@ -78,13 +78,14 @@ place(malign, dy: mdy, dx: mdx,
   ]
 ]
 
-#contentbox("Behavior", malign: top+left, mdy: 35cm, mheight:auto, mwidth:35cm)[
+#contentbox("Behavior", malign: top+left, mdy: 34cm, mheight:auto, mwidth:35cm)[
   #figure(image("figures/figure1_new.png"))
   #table(columns: (auto, auto), stroke: 0pt,
           image("figures/view_occupancy.png"),
           text(size:24pt)[A) An NHP subject seated in a primate chair navigating a virtual maze using a joystick. B) 3D rendering of the recording chamber and electrodes. We recorded from a total of 364 well-isolated neurons from the hippocampus. C) Top-down view of the maze showing the location of the 6 goal posters. D) Performance per start and goal poster pair. E) Trajectory length relative to optimal. F) Sample trajectories for one session. G) Distribution of gaze points on each of the surfaces of the maze.
-        #v(1.1cm)]
+        ]
     )
+    #v(3cm)
 ]
 
 //a bit hackish: just place a panel label here
@@ -98,10 +99,10 @@ place(malign, dy: mdy, dx: mdx,
 #contentbox("View responses", malign: top+left, mdx: 65cm, mdy: 22cm, mheight:auto, mwidth:32cm)[
   #figure(image("figures/figure3_new.png"))
   A-D) Examples of view selective cells. Each panel in A and C shows mean activity projected onto the unfolded pillars (left) and floor and walls (right). E-H) Statistics on number of fields (E), field size (F), and peak activity (G) for view cells  (gray) and non-view cells (black). View cells had higher firing rate than non-view cells (Mann-Whitney, $p=0.0002$) H) Number of overlapping view fields in each of the view bins in the maze.
-  \ 
+  #v(1.1cm) 
 ]
 
-#contentbox("Joint (Multiplexed) responses", malign: top+left, mdx: 36cm, mdy: 77cm, mheight:auto, mwidth:60cm)[
+#contentbox("Joint (Multiplexed) responses", malign: top+left, mdx: 36cm, mdy: 77cm, mheight:auto, mwidth:61cm)[
   #table(columns: (50%, 50%), stroke: 0pt,
          [
            #image("figures/figure_joint_fields.png")
@@ -115,9 +116,10 @@ place(malign, dy: mdy, dx: mdx,
         ]
       )
       )
+      #v(0.8cm)
 ]
 
-#contentbox("Field Conjunctions", malign: top+left, mdx: 99cm, mdy: 22cm, mheight:auto, mwidth:32cm)[
+#contentbox("Field Conjunctions", malign: top+left, mdx: 98cm, mdy: 22cm, mheight:auto, mwidth:33cm)[
   #image("figures/figure4_new.png")
   Example conjunctive unit. A) Original view fields (left) and place fields (right). B) View response conditioned on the pink place field. C) Mean activity within the original view field when the subject was in the place field (pink asterisk) vs when he was in other non-place field bins (gray distribution). A cell was conjunctive if this difference was significant ($p<0.001$). D-E) Same as C, but for place conditioned on view. F) The three cells with larger than 7.5 units distance between place (stick) and view (patches) fields.
   #table(columns: (1.3fr, 0.7fr),stroke:0pt,
@@ -126,7 +128,7 @@ place(malign, dy: mdy, dx: mdx,
   )
 ]
 
-#contentbox("Place field directionality", malign: top+left, mdx: 99cm, mdy: 65cm, mheight:auto, mwidth:32cm)[
+#contentbox("Place field directionality", malign: top+left, mdx: 98cm, mdy: 65cm, mheight:auto, mwidth:33cm)[
   //fig = PaperFigures.plot_directional_place_fields(;colormap=:jet, _plot_theme=SfN2026.plot_theme,figsize=(950,800))
   #align(center,
     image("figures/directional_place_fields_figure.png")
